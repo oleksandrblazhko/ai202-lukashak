@@ -1,0 +1,28 @@
+{
+  "arch_info": {
+    "desc": "Збудований у 1653 р",
+    "image": {},
+    "location": "(32.122, -15.551)",
+    "name": "City Tower"
+  },
+  "consumer": {
+    "name": "DanLuk",
+    "photo": {},
+    "info": {
+      "name": "Daniil",
+      "photo": {},
+      "desc": "Ось такий хлопчик",
+      "contacts": "+380677221213",
+      "full_info": {
+        "name": "Daniil Lukashak",
+        "photos": [
+          {},
+          {},
+          {}
+        ],
+        "desc": "Ну я",
+        "age": 19
+      }
+    }
+  }
+}

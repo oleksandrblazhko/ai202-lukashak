@@ -1,0 +1,119 @@
+{
+  "description": "Опис предметної області ПП",
+  "type": "object",
+  "properties": {
+    "arch_info": {
+      "description": "Інформація про архітектуру",
+      "type": "object",
+      "properties": {
+        "desc": {
+          "description": "Опис архітектури",
+          "type": "string"
+        },
+        "image": {
+          "description": "Фото архітектури",
+          "type": "BinData"
+        },
+        "location": {
+          "description": "Місцезнаходження",
+          "type": "Point"
+        },
+        "name": {
+          "description": "Назва",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "image",
+        "desc",
+        "location"
+      ]
+    },
+    "consumer": {
+      "description": "Опис споживача",
+      "type": "object",
+      "properties": {
+        "name": {
+          "description": "Ім'я споживача",
+          "type": "string"
+        },
+        "photo": {
+          "description": "Фото споживача",
+          "type": "BinData"
+        },
+        "info": {
+          "description": "Анкета користувача",
+          "type": "object",
+          "properties": {
+            "name": {
+              "description": "Ім'я користувача",
+              "type": "string"
+            },
+            "photo": {
+              "description": "Фото користувача",
+              "type": "BinData"
+            },
+            "desc": {
+              "description": "Короткий опис користувача",
+              "type": "string"
+            },
+            "contacts": {
+              "description": "Контактні дані користувача",
+              "type": "string"
+            },
+            "full_info": {
+              "description": "Докладна інформація про користувача",
+              "type": "object",
+              "properties": {
+                "name": {
+                  "description": "Ім'я користувача",
+                  "type": "string"
+                },
+                "photos": {
+                  "description": "Фото користувача",
+                  "type": "array",
+                  "items": {
+                    "description": "Фото користувача",
+                    "type": "BinData"
+                  }
+                },
+                "desc": {
+                  "description": "Повний опис користувача",
+                  "type": "string"
+                },
+                "contacts": {
+                  "description": "Контактні дані користувача",
+                  "type": "string"
+                },
+                "age": {
+                  "description": "Вік користувача",
+                  "type": "number"
+                },
+                "height": {
+                  "description": "Зріст користувача",
+                  "type": "number"
+                }
+              },
+              "required": [
+                "name",
+                "photo",
+                "desc",
+                "age"
+              ]
+            }
+          },
+          "required": [
+            "name",
+            "photo",
+            "desc"
+          ]
+        }
+      },
+      "required": [
+        "name",
+        "photo"
+      ]
+    }
+  }
+}
