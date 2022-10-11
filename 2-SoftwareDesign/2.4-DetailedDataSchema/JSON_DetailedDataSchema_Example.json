@@ -1,0 +1,165 @@
+{
+  "title": "Schema",
+  "description": "Опис предметної області ПП",
+  "bsonType": "object",
+  "properties": {
+    "arch_info": {
+      "description": "Інформація про архітектуру",
+      "bsonType": "object",
+      "properties": {
+        "desc": {
+          "description": "Опис архітектури",
+          "bsonType": "string",
+          "minLength": 1,
+          "maxLength": 2048
+        },
+        "image": {
+          "description": "Фото архітектури",
+          "bsonType": "binData",
+          "minLength": 1,
+          "maxLength": 10485760
+        },
+        "location": {
+          "description": "Місцезнаходження",
+          "bsonType": "object",
+          "properties": {
+            "latitude": {
+              "description": "Широта",
+              "bsonType": "double",
+              "minimum": -90,
+              "maximum": 90
+            },
+            "longitude": {
+              "description": "Довгота",
+              "bsonType": "double",
+              "minimum": -180,
+              "maximum": 180
+            }
+          }
+        },
+        "name": {
+          "description": "Назва",
+          "bsonType": "string",
+          "minLength": 1,
+          "maxLength": 256
+        }
+      },
+      "required": [
+        "name",
+        "image",
+        "desc",
+        "location"
+      ]
+    },
+    "consumer": {
+      "description": "Опис споживача",
+      "bsonType": "object",
+      "properties": {
+        "name": {
+          "description": "Ім'я споживача",
+          "bsonType": "string",
+          "pattern": "^[A-Z0-9\\-_]+$",
+          "minLength": 1,
+          "maxLength": 64
+        },
+        "photo": {
+          "description": "Фото споживача",
+          "bsonType": "binData",
+          "minLength": 1,
+          "maxLength": 10485760
+        },
+        "info": {
+          "description": "Анкета користувача",
+          "bsonType": "object",
+          "properties": {
+            "name": {
+              "description": "Ім'я користувача",
+              "bsonType": "string",
+              "pattern": "^[A-ZЄ-ЯҐа-їґ\\- ']+$",
+              "minLength": 1,
+              "maxLength": 64
+            },
+            "photo": {
+              "description": "Фото користувача",
+              "bsonType": "BinData",
+              "minLength": 1,
+              "maxLength": 10485760
+            },
+            "desc": {
+              "description": "Короткий опис користувача",
+              "bsonType": "string",
+              "minLength": 1,
+              "maxLength": 256
+            },
+            "contacts": {
+              "description": "Контактні дані користувача",
+              "bsonType": "string",
+              "minLength": 1,
+              "maxLength": 256
+            },
+            "full_info": {
+              "description": "Докладна інформація про користувача",
+              "bsonType": "object",
+              "properties": {
+                "name": {
+                  "description": "Ім'я користувача",
+                  "bsonType": "string",
+                  "pattern": "^[A-ZЄ-ЯҐа-їґ\\- ']+$",
+                  "minLength": 1,
+                  "maxLength": 64
+                },
+                "photos": {
+                  "description": "Фото користувача",
+                  "bsonType": "array",
+                  "maxItems": 6,
+                  "items": {
+                    "bsonType": "BinData",
+                    "minLength": 1,
+                    "maxLength": 10485760
+                  }
+                },
+                "desc": {
+                  "description": "Повний опис користувача",
+                  "bsonType": "string",
+                  "minLength": 1,
+                  "maxLength": 1024
+                },
+                "contacts": {
+                  "description": "Контактні дані користувача",
+                  "bsonType": "string",
+                  "minLength": 1,
+                  "maxLength": 256
+                },
+                "age": {
+                  "description": "Вік користувача",
+                  "bsonType": "int",
+                  "minimum": 1
+                },
+                "height": {
+                  "description": "Зріст користувача",
+                  "bsonType": "int",
+                  "minimum": 1
+                }
+              },
+              "required": [
+                "name",
+                "photo",
+                "desc",
+                "age"
+              ]
+            }
+          },
+          "required": [
+            "name",
+            "photo",
+            "desc"
+          ]
+        }
+      },
+      "required": [
+        "name",
+        "photo"
+      ]
+    }
+  }
+}
