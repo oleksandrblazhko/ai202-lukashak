@@ -58,6 +58,7 @@
         "name": {
           "description": "Ім'я споживача",
           "bsonType": "string",
+          "pattern": "^[A-Z0-9\\-_]+$",
           "minLength": 1,
           "maxLength": 64
         },
@@ -74,6 +75,7 @@
             "name": {
               "description": "Ім'я користувача",
               "bsonType": "string",
+              "pattern": "^[A-ZЄ-ЯҐа-їґ\\- ']+$",
               "minLength": 1,
               "maxLength": 64
             },
@@ -102,6 +104,7 @@
                 "name": {
                   "description": "Ім'я користувача",
                   "bsonType": "string",
+                  "pattern": "^[A-ZЄ-ЯҐа-їґ\\- ']+$",
                   "minLength": 1,
                   "maxLength": 64
                 },
