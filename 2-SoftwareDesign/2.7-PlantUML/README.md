@@ -1,1 +1,1 @@
-### «Фрагменти UML-діаграм за методом «Diagrams as Codes»
+### Фрагменти UML-діаграм за методом «Diagrams as Codes»
