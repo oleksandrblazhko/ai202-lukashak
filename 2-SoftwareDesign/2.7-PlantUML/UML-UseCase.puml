@@ -1,0 +1,13 @@
+@startuml uml
+
+actor Споживач as act #Pink
+
+rectangle System {
+    usecase (Отримати інформацію\n про архітектуру) as use1 #LightBlue
+    usecase (Авторизувати користувача) as use2 #LightBlue
+
+    act -- use1
+    use1 .> use2 : include
+}
+
+@enduml
