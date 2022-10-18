@@ -1,0 +1,17 @@
+@startuml uml2
+
+title Deployment for information System
+
+left to right direction
+
+node "<< Смартфон >>" as sm {
+	node "<< ОС Android >>" {
+		component [~*.apk\n(React Native)]
+	}
+}
+
+interface "Сенсорний екран" as sn
+
+sn - sm
+
+@enduml

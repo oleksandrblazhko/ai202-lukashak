@@ -1,0 +1,17 @@
+@startuml
+
+title Activity Diagram
+
+start
+
+:ПП робить запит на отримання\nтворів архітектури з API; 
+
+if (Запит закінчився успішно?) then (yes)
+  :Отримано дані з API;
+else (no)
+  :Api Error;
+endif
+
+stop
+
+@enduml

@@ -1,0 +1,31 @@
+@startuml uml3
+
+title Concept Classes Diagram
+
+skinparam linetype ortho
+
+Class "Споживач" as sp {
+    Ім'я
+    Фото
+}
+Class "Анкета користувача" as ac {
+    Ім'я
+    Фото
+    Короткий опис
+    Контактні дані
+}
+Class "Докладна інформація" as ii {
+    Ім'я
+    Фото
+    Опис
+    Контактні дані
+    Вік
+    Зріст
+}
+
+sp"*" --> "*"ac : переглядає
+sp"1" o-- "1"ac
+sp"*" --> "*"ii : переглядає
+ac"1" o-- "1"ii
+
+@enduml
