@@ -1,14 +1,17 @@
-import { mongoClient, client } from './client.js'
+const {client, db} = require('./db');
 
 async function sendMessage(user_id, message) {
     if (message.length < 1 || message.length > 1024) {
         return -2;
     }
+    if (user_id < 0) {
+        return -1;
+    }
 
     const messageObj = {
         sender: client.id,
-        receiver,
-        text,
+        receiver: user_id,
+        text: message,
         date: Date.now()
     }
 
