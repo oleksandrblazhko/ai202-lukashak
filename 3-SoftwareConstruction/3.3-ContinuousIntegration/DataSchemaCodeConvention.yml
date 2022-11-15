@@ -1,0 +1,13 @@
+name: JSON Linter
+on: push
+jobs:
+ json_linter_test:
+  runs-on: ubuntu-latest
+  steps:
+  - name: checkout
+    uses: "actions/checkout@v3"
+
+  - name: Start JSON Linter
+    run: |
+      npm i -g @prantlf/jsonlint
+      jsonlint $GITHUB_WORKSPACE/DataSchema.json
